@@ -1,2 +1,4 @@
 resnet50_coco_best_v2.0.1.h5
 *.h5
+test.mp4
+test_detected.avi
