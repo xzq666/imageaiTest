@@ -8,6 +8,10 @@ Created on Thu Dec 27 09:28:34 2018
 
 from imageai.Detection import ObjectDetection
 import os
+import time
+
+start = time.time()
+print("开始识别...")
 
 # 返回当前目录
 execution_path = os.getcwd()
@@ -20,3 +24,7 @@ detections = detector.detectCustomObjectsFromImage(input_image=os.path.join(exec
 
 for eachObject in detections:
     print(eachObject['name'] + ': ' + str(eachObject['percentage_probability']))
+    
+end = time.time()
+print("识别结束")
+print("耗时: " + str(end - start))
